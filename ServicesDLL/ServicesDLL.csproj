@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B70E928F-394F-416C-B7ED-BDF4AF1FC31E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServicesDLL</RootNamespace>
+    <AssemblyName>ServicesDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AopSdk.2.0.0\lib\net40\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIModel\JGS1810\InPark.cs" />
+    <Compile Include="APIModel\JGS1810\OutPark.cs" />
+    <Compile Include="APIModel\JGS1810\ResultModel.cs" />
+    <Compile Include="APIResult.cs" />
+    <Compile Include="ClearData.cs" />
+    <Compile Include="DbBackUpAndRestore.cs" />
+    <Compile Include="Model\CompletebillModel.cs" />
+    <Compile Include="Model\DHWY\InCXJFModel.cs" />
+    <Compile Include="Model\DHWY\InPModel.cs" />
+    <Compile Include="Model\DHWY\InWPCCCModel.cs" />
+    <Compile Include="Model\DHWY\InWPCRCModel.cs" />
+    <Compile Include="Model\DHWY\InXJFYModel.cs" />
+    <Compile Include="Model\DHWY\OutCXJFModel.cs" />
+    <Compile Include="Model\DHWY\OutPModel.cs" />
+    <Compile Include="Model\DiscountInfoModel.cs" />
+    <Compile Include="Model\DiscountModel.cs" />
+    <Compile Include="Model\EnterModel.cs" />
+    <Compile Include="Model\EnterReuslt.cs" />
+    <Compile Include="Model\ExitModel.cs" />
+    <Compile Include="Model\KDE\BookingModel.cs" />
+    <Compile Include="Model\KDE\ChangeusertypeDataModel.cs" />
+    <Compile Include="Model\KDE\ChangeusertypeModel.cs" />
+    <Compile Include="Model\KDE\ChannelModel.cs" />
+    <Compile Include="Model\KDE\CloudPayModel.cs" />
+    <Compile Include="Model\KDE\CloudPayRes.cs" />
+    <Compile Include="Model\KDE\DeviceStatusModel.cs" />
+    <Compile Include="Model\KDE\InModel.cs" />
+    <Compile Include="Model\KDE\LockcarModel.cs" />
+    <Compile Include="Model\KDE\LockcarRes.cs" />
+    <Compile Include="Model\KDE\MonthlyUserRechargeModel.cs" />
+    <Compile Include="Model\KDE\OfflinePayModel.cs" />
+    <Compile Include="Model\KDE\OpengateModel.cs" />
+    <Compile Include="Model\KDE\OutModel.cs" />
+    <Compile Include="Model\KDE\DownModel.cs" />
+    <Compile Include="Model\KDE\PaidnotifyModel.cs" />
+    <Compile Include="Model\KDE\PaidnotifyRes.cs" />
+    <Compile Include="Model\KDE\ParkInfoModel.cs" />
+    <Compile Include="Model\KDE\ParkingfeeModel.cs" />
+    <Compile Include="Model\KDE\PhotoModel.cs" />
+    <Compile Include="Model\KDE\RefreshModel.cs" />
+    <Compile Include="Model\KDE\RetGetparkingfeeModel.cs" />
+    <Compile Include="Model\KDE\SignData.cs" />
+    <Compile Include="Model\KDE\TokenModel.cs" />
+    <Compile Include="Model\KDE\TokenResult.cs" />
+    <Compile Include="Model\KDE\UplaodReuslt.cs" />
+    <Compile Include="Model\KDE\WhitelistDataModel.cs" />
+    <Compile Include="Model\KDE\WhitelistModel.cs" />
+    <Compile Include="Model\KDE\XXResult.cs" />
+    <Compile Include="Model\LF\GetToken.cs" />
+    <Compile Include="Model\LF\GetTokenRquest.cs" />
+    <Compile Include="Model\LF\PushCarEnterRes.cs" />
+    <Compile Include="Model\LF\PushCarEnterRquest.cs" />
+    <Compile Include="Model\LF\PushCarOutRes.cs" />
+    <Compile Include="Model\LF\PushCarOutRquest.cs" />
+    <Compile Include="Model\LF\PushMonthlyFeeRes.cs" />
+    <Compile Include="Model\LF\PushMonthlyFeeRquest.cs" />
+    <Compile Include="Model\LF\PushMonthlyUserInfoRes.cs" />
+    <Compile Include="Model\LF\PushMonthlyUserInfoRquest.cs" />
+    <Compile Include="Model\LF\PushOffLinePayRes.cs" />
+    <Compile Include="Model\LF\PushParkinglotInfoRes.cs" />
+    <Compile Include="Model\LF\PushParkinglotInfoRquest.cs" />
+    <Compile Include="Model\LF\RefreshTokenRes.cs" />
+    <Compile Include="Model\LF\RefreshTokenRquest.cs" />
+    <Compile Include="Model\LF\RequestCloudPayRes.cs" />
+    <Compile Include="Model\LF\RequestCloudPayRquest.cs" />
+    <Compile Include="Model\ModifyModel.cs" />
+    <Compile Include="Model\OndutyModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\PaidinfoModel.cs" />
+    <Compile Include="Model\ParkstatusModel.cs" />
+    <Compile Include="Model\PP\Billing.cs" />
+    <Compile Include="Model\PP\BillingRes.cs" />
+    <Compile Include="Model\PP\CarInOutInfo.cs" />
+    <Compile Include="Model\PP\Detail.cs" />
+    <Compile Include="Model\PP\DetailRes.cs" />
+    <Compile Include="Model\PP\Discount.cs" />
+    <Compile Include="Model\PP\DiscountCreate.cs" />
+    <Compile Include="Model\PP\DiscountCreateRes.cs" />
+    <Compile Include="Model\PP\DiscountDestroy.cs" />
+    <Compile Include="Model\PP\DiscountDestroyRes.cs" />
+    <Compile Include="Model\PP\DiscountQuery.cs" />
+    <Compile Include="Model\PP\DiscountQueryRes.cs" />
+    <Compile Include="Model\PP\Locking.cs" />
+    <Compile Include="Model\PP\LockingRes.cs" />
+    <Compile Include="Model\PP\Parks.cs" />
+    <Compile Include="Model\PP\Payments.cs" />
+    <Compile Include="Model\PP\Query.cs" />
+    <Compile Include="Model\PP\QueryRes.cs" />
+    <Compile Include="Model\PP\QuestHeard.cs" />
+    <Compile Include="Model\PP\Realtime.cs" />
+    <Compile Include="Model\PP\RealtimeRes.cs" />
+    <Compile Include="Model\PP\Records.cs" />
+    <Compile Include="Model\PP\RecordsRes.cs" />
+    <Compile Include="Model\PP\Renewal.cs" />
+    <Compile Include="Model\PP\RenewalRes.cs" />
+    <Compile Include="Model\PP\Result.cs" />
+    <Compile Include="Model\PP\ResultRes.cs" />
+    <Compile Include="Model\PP\ScanBilling.cs" />
+    <Compile Include="Model\PP\Share.cs" />
+    <Compile Include="Model\PP\ShareParks.cs" />
+    <Compile Include="Model\PP\ShareRealtime .cs" />
+    <Compile Include="Model\PP\ShareRealtimeRes.cs" />
+    <Compile Include="Model\PP\ShareRes.cs" />
+    <Compile Include="Model\PP\TradeList.cs" />
+    <Compile Include="Model\PP\TradeListRes.cs" />
+    <Compile Include="Model\PP\TradeRows.cs" />
+    <Compile Include="Model\PP\Vips.cs" />
+    <Compile Include="Model\SZJGJ\CarinuploadPost.cs" />
+    <Compile Include="Model\SZJGJ\CarinuploadRequst.cs" />
+    <Compile Include="Model\SZJGJ\CaroutuploadPost.cs" />
+    <Compile Include="Model\SZJGJ\CaroutuploadRequst.cs" />
+    <Compile Include="Model\SZJGJ\PsnmngPost.cs" />
+    <Compile Include="Model\SZJGJ\PsnmngRequst.cs" />
+    <Compile Include="Model\UploadReuslt.cs" />
+    <Compile Include="Model\XJNB\HeartbeatModel.cs" />
+    <Compile Include="Model\XJNB\HeartbeatMSGModel.cs" />
+    <Compile Include="Model\XJNB\IODataModel.cs" />
+    <Compile Include="Model\XJNB\PostModel.cs" />
+    <Compile Include="Model\XJNB\RequestModel.cs" />
+    <Compile Include="Model\XJSZW\CarRecord.cs" />
+    <Compile Include="Model\XJXQ\DriverData.cs" />
+    <Compile Include="Model\XJXQ\PassengerData.cs" />
+    <Compile Include="Model\XJXQ\ResponseData.cs" />
+    <Compile Include="Model\XJXQ\Vehicle.cs" />
+    <Compile Include="Model\XJXQ\Visitor.cs" />
+    <Compile Include="Model\YLWGZF\InRecordModel.cs" />
+    <Compile Include="Model\YLWGZF\ResultModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyCallBackDLL.cs" />
+    <Compile Include="SHJGJTcp.cs" />
+    <Compile Include="UploadDataDLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{EF989F15-C062-4C7D-8B69-8ACE8540C07B}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{18F0CE73-B168-4D53-BCED-FD6C4E0D4378}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Entities\Common.Entities.csproj">
+      <Project>{2A5BF93F-E241-48AE-905E-712A3152EF8C}</Project>
+      <Name>Common.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Utilities\Common.Utilities.csproj">
+      <Project>{660F9B65-6AD0-4984-914C-4459C41CA966}</Project>
+      <Name>Common.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

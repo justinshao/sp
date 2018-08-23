@@ -1,0 +1,71 @@
+﻿<Window x:Class="PlatformServers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="云平台服务器" Height="480" Width="600" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Loaded="Window_Loaded" Icon="icon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid  Width="200">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB7B0B0" Offset="0.994" />
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FFD8D8D8" Offset="0.57" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="25" Foreground="#FFBE3333" VerticalAlignment="Center"   HorizontalAlignment="Center" >智慧云平台应用</TextBlock>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                <Button Width="150" Margin="0,30,0,0" Click="Button_Click">服务配置</Button>
+                <Button Width="150" Margin="0,30" Name="btstop" Click="Button_Click_1">全部停止</Button>
+                <Button Width="150" Name="btstart" Click="Button_Click_2">全部启动</Button>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+               
+                
+                    <TextBlock > 总共运行时间：</TextBlock>
+                    <TextBlock Name="tbRunTime"></TextBlock>
+            </StackPanel>
+
+        </Grid>
+        <Grid  Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*">
+                </RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DataGrid Name="lvservers" AutoGenerateColumns="False" IsReadOnly="True" IsEnabled="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="应用服务" Width="*"  Binding="{Binding Path=ServiceName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="状态" Width="120"  Binding="{Binding Path=RunningName}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <ListView Name="lvconnection" Grid.Row="1" Height="200">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="小区名称" Width="200"  DisplayMemberBinding="{Binding Path=Villagename}"/>
+                        <GridViewColumn Header="登陆时间" Width="170" DisplayMemberBinding="{Binding Path=ConnectionDate,StringFormat='yyyy-MM-dd HH:mm:ss'}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <TextBlock>数据库连接状态：</TextBlock>
+                <Image Name="dbconnection" Width="15" Source="/Proxy-Callback;component/Images/Device_Offline.png"></Image>
+                <TextBlock>当前在线数：</TextBlock>
+                <TextBlock Name="tbOnlineNum"></TextBlock>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCC81448-810B-463F-B990-B9B345D4344D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HostingService</RootNamespace>
+    <AssemblyName>HostingService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbContext\AdvanceParking.cs" />
+    <Compile Include="DbContext\Ali_ApiConfig.cs" />
+    <Compile Include="DbContext\BaseCard.cs" />
+    <Compile Include="DbContext\BaseCity.cs" />
+    <Compile Include="DbContext\BaseCompany.cs" />
+    <Compile Include="DbContext\BaseEmployee.cs" />
+    <Compile Include="DbContext\BaseParkinfo.cs" />
+    <Compile Include="DbContext\BasePassRemark.cs" />
+    <Compile Include="DbContext\BaseProvince.cs" />
+    <Compile Include="DbContext\BaseVillage.cs" />
+    <Compile Include="DbContext\BWYGateMapping.cs" />
+    <Compile Include="DbContext\EmployeePlate.cs" />
+    <Compile Include="DbContext\Exception.cs" />
+    <Compile Include="DbContext\LoginLog.cs" />
+    <Compile Include="DbContext\OnlineOrder.cs" />
+    <Compile Include="DbContext\OperateLog.cs" />
+    <Compile Include="DbContext\ParkArea.cs" />
+    <Compile Include="DbContext\ParkBlacklist.cs" />
+    <Compile Include="DbContext\ParkBox.cs" />
+    <Compile Include="DbContext\ParkCarBitGroup.cs" />
+    <Compile Include="DbContext\ParkCarDerate.cs" />
+    <Compile Include="DbContext\ParkCardSuspendPlan.cs" />
+    <Compile Include="DbContext\ParkCarlineInfo.cs" />
+    <Compile Include="DbContext\ParkCarModel.cs" />
+    <Compile Include="DbContext\ParkCarType.cs" />
+    <Compile Include="DbContext\ParkCarTypeSingle.cs" />
+    <Compile Include="DbContext\ParkChangeshiftrecord.cs" />
+    <Compile Include="DbContext\ParkDerate.cs" />
+    <Compile Include="DbContext\ParkDerateConfig.cs" />
+    <Compile Include="DbContext\ParkDerateIntervar.cs" />
+    <Compile Include="DbContext\ParkDerateQRcode.cs" />
+    <Compile Include="DbContext\ParkDevice.cs" />
+    <Compile Include="DbContext\ParkDeviceDetection.cs" />
+    <Compile Include="DbContext\ParkDeviceParam.cs" />
+    <Compile Include="DbContext\ParkEvent.cs" />
+    <Compile Include="DbContext\ParkFeeRule.cs" />
+    <Compile Include="DbContext\ParkFeeRuleDetail.cs" />
+    <Compile Include="DbContext\ParkGate.cs" />
+    <Compile Include="DbContext\ParkGateIOTime.cs" />
+    <Compile Include="DbContext\ParkGrant.cs" />
+    <Compile Include="DbContext\ParkInterim.cs" />
+    <Compile Include="DbContext\ParkIORecord.cs" />
+    <Compile Include="DbContext\ParkLpPlan.cs" />
+    <Compile Include="DbContext\ParkMonthlyCarApply.cs" />
+    <Compile Include="DbContext\ParkOrder.cs" />
+    <Compile Include="DbContext\ParkReserveBit.cs" />
+    <Compile Include="DbContext\ParkSeller.cs" />
+    <Compile Include="DbContext\ParkSettlement.cs" />
+    <Compile Include="DbContext\ParkSettlementApprovalFlow.cs" />
+    <Compile Include="DbContext\ParkTimesery.cs" />
+    <Compile Include="DbContext\ParkVisitor.cs" />
+    <Compile Include="DbContext\PersonTg.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbContext\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbContext\SetupVersion.cs" />
+    <Compile Include="DbContext\SetupVersionFile.cs" />
+    <Compile Include="DbContext\SpsDbContext.cs" />
+    <Compile Include="DbContext\Statistics_ChangeShift.cs" />
+    <Compile Include="DbContext\Statistics_Gather.cs" />
+    <Compile Include="DbContext\Statistics_GatherGate.cs" />
+    <Compile Include="DbContext\Statistics_GatherLongTime.cs" />
+    <Compile Include="DbContext\SysCPModelRight.cs" />
+    <Compile Include="DbContext\SysDictionary.cs" />
+    <Compile Include="DbContext\SysRole.cs" />
+    <Compile Include="DbContext\SysRoleAuthorize.cs" />
+    <Compile Include="DbContext\SysScope.cs" />
+    <Compile Include="DbContext\SysScopeAuthorize.cs" />
+    <Compile Include="DbContext\SysUser.cs" />
+    <Compile Include="DbContext\SysUserRolesMapping.cs" />
+    <Compile Include="DbContext\SysUserScopeMapping.cs" />
+    <Compile Include="DbContext\TgCount.cs" />
+    <Compile Include="DbContext\TV_ParkIORecord_countpk.cs" />
+    <Compile Include="DbContext\UploadDataState.cs" />
+    <Compile Include="DbContext\UploadImg.cs" />
+    <Compile Include="DbContext\VisitorInfo.cs" />
+    <Compile Include="DbContext\WX_Account.cs" />
+    <Compile Include="DbContext\WX_ApiConfig.cs" />
+    <Compile Include="DbContext\WX_Article.cs" />
+    <Compile Include="DbContext\WX_CarInfo.cs" />
+    <Compile Include="DbContext\WX_Info.cs" />
+    <Compile Include="DbContext\WX_InteractionInfo.cs" />
+    <Compile Include="DbContext\WX_Keyword.cs" />
+    <Compile Include="DbContext\WX_LockCar.cs" />
+    <Compile Include="DbContext\WX_Menu.cs" />
+    <Compile Include="DbContext\WX_MenuAccessRecord.cs" />
+    <Compile Include="DbContext\WX_OpinionFeedback.cs" />
+    <Compile Include="DbContext\WX_OtherConfig.cs" />
+    <Compile Include="DbContext\WX_UserLocation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
